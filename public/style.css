@@ -1,0 +1,77 @@
+div {
+    height: 20px;
+    width: 5px;
+    background-color: black;
+    display: block;
+}
+
+div {
+    background-color: #fff;
+    height: 100px;
+    width: 10px;
+    transition: all 1s cubic-bezier(0.14, -1.35, 0, 2.31);
+    position: absolute;
+}
+
+div:after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    width: 10px;
+    box-shadow: 0px 10px 0px #df0600, 0px 30px 0px #DF0600, 0px 50px 0px #DF0600, 0px 70px 0px #DF0600, 0px 90px 0px #DF0600;
+    height: 10px;
+}
+
+.e {
+    transform: rotate(-153deg) translate(-82px, -8px);
+}
+
+.e:only-child {
+    transform: rotate(-55deg) translate(30px, 16px);
+}
+
+.e:nth-of-type(3) {
+    transform: rotate(245deg) translate(-65px, 39px);
+    height: 39px;
+    overflow: hidden;
+}
+
+.v {
+    transform: rotate(116deg) translate(24px, 115px);
+    height: 53px;
+    overflow: hidden;
+}
+
+.j {
+    transform: rotate(30deg) translateX(200px);
+}
+
+.l {
+    transform: rotate(28deg) translate(102px,-55px);
+}
+
+.u {
+    transform: rotate(-29deg) translate(67px, 8px);
+}
+
+.y {
+    transform: rotate(25deg) translateX(134px);
+}
+
+.n {
+    transform: rotate(27deg) translateX(-100px);
+}
+
+.t {
+    transform: rotate(114deg) translateX(39px);
+    overflow: hidden;
+    height: 40px;
+}
+
+.r {
+    transform: rotate(116deg) translate(59px,-190px);
+    overflow: hidden;
+    height: 60px;
+}
