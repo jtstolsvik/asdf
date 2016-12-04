@@ -50,10 +50,9 @@ app.get('/api/secretInformationForGrinchOnly', function (req, res) {
     if (req.header("secretHidden") === "false") {
         res.send({
             "name": "Mad Grinch",
-            "secret": "muahaha"
+            "secret": "Ferdig, lenke videre til neste oppgave e.l."
         });
-    }
-    if (req.cookies.user === "Grinch") {
+    } else if (req.cookies.user === "Grinch") {
         res.send({
             "name": "Grinch",
             "howMySecretIsProtected": "header secretHidden=false"
@@ -64,7 +63,6 @@ app.get('/api/secretInformationForGrinchOnly', function (req, res) {
 });
 
 app.get('/HA1L', function (req, res) {
-    res.cookie("test", "ok");
     if (req.query.harTilgang === "true") {
         res.redirect("/qwerasdfzxcv.html")
     } else if (req.query.harTilgang !== "false") {
