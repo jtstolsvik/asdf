@@ -5,6 +5,7 @@ var mongo = require('mongodb');
 var monk = require('monk');
 var db = monk('test:test@ds119568.mlab.com:19568/jul');
 var bodyParser = require('body-parser');
+var path = require("path");
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded());
 app.use(bodyParser.urlencoded({extended: true}));
@@ -68,7 +69,8 @@ app.get('/HA1L', function (req, res) {
     } else if (req.query.harTilgang !== "false") {
         res.redirect("/HA1L?harTilgang=false")
     } else {
-        res.send('Hurra, du er på riktig spor, men det mangler noe');
+        res.sendFile(path.resolve("public/zoon.html"));
+        // res.send('Hurra, du er på riktig spor, men det mangler noe');
     }
 });
 
