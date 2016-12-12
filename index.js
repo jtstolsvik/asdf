@@ -51,7 +51,7 @@ app.get('/api/secretInformationForGrinchOnly', function (req, res) {
     if (req.header("secretHidden") === "false") {
         res.send({
             "name": "Mad Grinch",
-            "secret": "Ferdig, lenke videre til neste oppgave e.l."
+            "secret": "http://juuuul.azurewebsites.net/"
         });
     } else if (req.cookies.user === "Grinch") {
         res.send({
